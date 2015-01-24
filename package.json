@@ -1,0 +1,36 @@
+{
+  "name": "grunt-lambda-log",
+  "version": "0.0.0",
+  "description": "Display AWS Lambda log",
+  "main": "task/lambda_log.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k-kinzal/grunt-lambda-log"
+  },
+  "author": {
+    "name": "k-kinzal",
+    "email": "log@logn.in"
+  },
+  "keywords": [
+    "gruntplugin",
+    "aws",
+    "lambda"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k-kinzal/grunt-lambda-log/issues"
+  },
+  "homepage": "https://github.com/k-kinzal/grunt-lambda-log",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1.7",
+    "bluebird": "^2.9.1"
+  }
+}
