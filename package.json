@@ -1,6 +1,6 @@
 {
   "name": "grunt-lambda-log",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Display AWS Lambda log",
   "main": "task/lambda_log.js",
   "scripts": {
