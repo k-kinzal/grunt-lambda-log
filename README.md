@@ -33,8 +33,7 @@ grunt.initConfig({
     options: {
       functionName: 'functionname',
       startTime: (new Date()).getTime(),
-      tail: true,
-      firstLogOnly: true
+      endText: /^REPORT RequestId/
     },
     debug: {}
   },
