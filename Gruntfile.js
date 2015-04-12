@@ -1,11 +1,5 @@
 'use strict';
-/*
- * lambda upload
- * https://github.com/k-kinzal/grunt-lambda-log
- *
- * Copyright (c) 2012-2015 k-kinzal
- * Licensed under the MIT license.
- */
+
 module.exports = function (grunt) {
   // configuration
   var config = grunt.initConfig({
@@ -19,6 +13,14 @@ module.exports = function (grunt) {
         'src/*.js',
         'Gruntfile.js'
       ]
+    },
+    lambda_log: {
+      options: {
+        functionName: 'env',
+        // startTime: (new Date()).getTime(),
+        // endText: /^REPORT RequestId/
+      },
+      debug: {}
     }
   });
   // tasks
@@ -26,6 +28,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint'); 
     grunt.task.run([
       'jshint'
+    ]);
+  });
+  grunt.registerTask('log', function() {
+    require('./tasks/lambda_log')(grunt);
+    grunt.task.run([
+      'lambda_log'
     ]);
   });
 };
